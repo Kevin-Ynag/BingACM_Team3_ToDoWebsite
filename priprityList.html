@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashley</title>
+    <style>
+        .navigationBar {
+            background-color: #fc9712;
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navigationBar">
+        <a href="index.html">
+            <button type= "button">Exit</button>
+        </a>
+
+        <a href = "planner.html">
+            <button type = "button">planner</button>
+        </a>
+    </nav>
+
+    <h1 align = 'center'>
+        Priprity List
+    </h1>
+
+    <div align = 'center'>
+    <input type = "text" placeholder = "Add your task" id = "userTask"></input>
+    <div>
+        <button type = "button" onclick = "addTask()">ADD</button>
+        <p id = "tasks"></p>
+    </div>
+    <script>
+        function addTask() {
+            var input = document.getElementById("userTask").value;
+            var target = document.getElementById("tasks");
+            target.insertAdjacentHTML("beforeend", input + "<br>"); 
+        }
+    </script>
+    </div>
+
+</body>
+</html>
