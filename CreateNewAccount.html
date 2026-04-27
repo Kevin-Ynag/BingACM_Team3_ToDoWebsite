@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create New Account</title>
+
+    <style>
+        body{
+            background-color: white; /*Subject to change*/
+        }
+        .creationBox{
+            margin-left: auto;
+            margin-right: auto;
+            background-color: #1b5777;
+            color: white;
+            padding: 15px;
+            border: 2px solid black;
+            width: 300px;
+            text-align: center;
+        }
+        .messageBox{
+            margin-left: auto;
+            margin-right: auto;
+            width: 300px;
+            height: 25px;
+            color: white;
+            text-align: center;
+        }
+        .creationButton{ /*Style for the "create" button*/
+
+        }
+    </style>
+</head>
+<body>
+    <p id = "creationMessage" class = "messageBox"></p>
+
+    <div class = "creationBox">
+        <a href = "index.html" style = "color: white">
+            Return
+        </a>>
+        <h1>
+            Create your account
+        </h1>
+
+        <p>
+            Username
+        </p>
+        <input type = "text" id = Username name = "Username">
+
+        <p>
+            Password:
+        </p>
+        <input type = "password" id = Password name = "Password">
+
+        <p>
+            Confirm paassword:
+        </p>
+        <input type = "password" id = ConfirmPassword name = "confirmPassword">
+        <br><br>
+        <button onclick = "createAccount()" class = "creationButton">
+            Create
+        </button>
+
+        <script>
+            function createAccount(){
+                const userName = document.getElementById("Username").value;
+                const originalPassword = document.getElementById("Password").value;
+                const confirmPassword = document.getElementById("ConfirmPassword").value;
+                const message = document.getElementById("creationMessage");
+
+                /*
+                    Future task: CHeck if the username is already taken (Backend)
+                */
+                if(originalPassword == "" || userName == ""){
+                    message.innerHTML = "&#9830; Please do not leave your anything empty &#9830;";
+                    document.getElementById("creationMessage").style.backgroundColor = "red";
+                }else if(originalPassword != confirmPassword){
+                    message.innerHTML = "&#9830; The password and confirmation password do not match. Please try again. &#9830;";
+                    document.getElementById("creationMessage").style.backgroundColor = "red";
+                }else{
+                    message.innerHTML = "Your Account have been created!";
+                    document.getElementById("creationMessage").style.backgroundColor = "lightgreen";
+                }
+            }
+        </script>
+    </div>
+</body>
+</html>

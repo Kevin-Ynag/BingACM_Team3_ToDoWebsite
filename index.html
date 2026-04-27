@@ -8,34 +8,61 @@ Version 1.0
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kingsley</title>
+    <title>HomePage</title>
     <style>
+        body{
+            background-image: url('backgroundTree.jpg');
+             background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .loginBox{
+            margin-left: auto;
+            margin-right: auto;
+            background-color: #1b5777;
+            color: white;
+            padding: 15px;
+            border: 2px solid black;
+            width: 300px;
+            text-align: center;
+        }
     </style>
 </head>
 
 <body>
-    <div align = 'center'>
+    <div align = 'center' style = "color: white">
         <h1>
             Welcome to your schedule planner!
         </h1>
+        <h2>
+            Good to see you again
+        </h2>
     </div>
     <br><br><br>
 
-    <div align = 'center'>
-        <label>Username: </label>
-    <input type="email">
-    </div>
-    <br><br>
-    <div align = 'center'>
-        <label>Password: </label>
+    <div class = "loginBox">
+        <p>Username</p>
         <input type = "text">
-    </div>
 
-    <a href = "planner.html">
-        <button type = "button">
-            Enter
-        </button>
-    </a>
+        <p>Password</p>
+        <input type = "password"><br><br>
+
+        <!-- <button onclick = "something()"></button> 
+        Future login button. When onclick check username and password with database to see if they are someone 
+        -->
+
+        <a href = "planner.html">
+            <button>Sign in</button>
+        </a>
+
+        <p>Don't have an account?</p>
+        <a href = "CreateNewAccount.html" style = "color: white">
+            <p>Sign up</p>
+        </a>
+        
+    </div>
 </body>
 
 </html>
