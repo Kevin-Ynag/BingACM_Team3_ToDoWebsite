@@ -22,7 +22,6 @@
         .messageBox{
             margin-left: auto;
             margin-right: auto;
-            width: 300px;
             height: 25px;
             color: white;
             text-align: center;
@@ -75,12 +74,15 @@
                 if(originalPassword == "" || userName == ""){
                     message.innerHTML = "&#9830; Please do not leave your anything empty &#9830;";
                     document.getElementById("creationMessage").style.backgroundColor = "red";
+                    document.getElementsByClassName("messageBox").element.style.width = "1000px";
                 }else if(originalPassword != confirmPassword){
                     message.innerHTML = "&#9830; The password and confirmation password do not match. Please try again. &#9830;";
                     document.getElementById("creationMessage").style.backgroundColor = "red";
+                    document.getElementsByClassName("messageBox").element.style.width = "1000px";
                 }else{
                     message.innerHTML = "Your Account have been created!";
                     document.getElementById("creationMessage").style.backgroundColor = "lightgreen";
+                    document.getElementsByClassName("messageBox").element.style.width = "300px";
                 }
             }
         </script>
