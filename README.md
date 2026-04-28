@@ -12,9 +12,12 @@ This website aims to help users organize tasks efficiently with a clean and cust
 
 **Contributors**
 This project is a collaborative effort by a team of 6 developers
-
-- Kevin Yang
-- 
+-Ashley
+-Chris
+- Rijaa
+- Jason
+- Kevin
+- Kingsley
 
 **WORK IN PROGRESS**
 To run the project locally:
